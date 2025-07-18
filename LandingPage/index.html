@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Torts Attorney - Legal Excellence & Justice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #f97316;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f97316;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url();
+            opacity: 0.3;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .highlight {
+            color: #f97316;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+        }
+
+        .hero-image {
+            text-align: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border: 1px solid #e5e7eb;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .service-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            color: #1e3a8a;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .expertise-section {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .expertise-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .expertise-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Form Section */
+        .contact-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            color: #1e3a8a;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-features {
+            list-style: none;
+        }
+
+        .contact-features li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: #1e3a8a;
+            font-weight: 500;
+        }
+
+        .contact-features li::before {
+            content: '✓';
+            background: #f97316;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1e3a8a;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #f97316;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(30, 58, 138, 0.4);
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 60px 0;
+            background: #1e3a8a;
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #f97316;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f172a;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer p {
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-container,
+            .contact-container,
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">Torts.Attorney</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content animate-fade-in">
+                <h1>Redefining <span class="highlight">Legal Excellence</span><br>Winning Where It Counts</h1>
+                <p>We've reshaped law, business, and society by pushing boundaries. Our attorneys skillfully resolve disputes through litigation, mediation, and arbitration, always ready for the courtroom but focused on efficient solutions.</p>
+                <a href="#contact" class="cta-button">Free Case Review</a>
+            </div>
+            <div class="hero-image">
+                <img src="project2.png" alt="Justice Scales - Professional Legal Services" style="filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">1,500+</div>
+                    <div class="stat-label">Cases Resolved</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Available Support</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>Compassionate Legal Care</h2>
+                <p>At Torts.Attorney, we understand that legal challenges often come during the most difficult times in your life. Our experienced team provides personalized attention and compassionate support throughout your legal journey.</p>
+                <p>We believe in treating every client with dignity and respect, ensuring you receive the care and attention you deserve while we fight for your rights and the compensation you're entitled to.</p>
+                <a href="#contact" class="cta-button">Get Personal Consultation</a>
+            </div>
+            <div class="about-image">
+                <img src="Hero-TTA.png" alt="Compassionate Legal Care - Healthcare Provider with Patient">
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="expertise-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Our Legal Team</h2>
+                <p>Our expertise spans multiple areas of law, ensuring comprehensive legal support for your case.</p>
+            </div>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <img src="" alt="Pharmaceutical Expertise - Professional Pharmacist">
+                    <h3>Pharmaceutical Expertise</h3>
+                    <p>Deep understanding of pharmaceutical litigation and drug-related injury cases with proven results.</p>
+                </div>
+                <div class="expertise-card">
+                    <img src="" alt="Medical Assessment - Healthcare Professional">
+                    <h3>Medical Assessment</h3>
+                    <p>Comprehensive medical evaluation and documentation to strengthen your case and maximize compensation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Legal Services</h2>
+                <p>We specialize in mass tort claims and personal injury cases, providing expert legal representation across various practice areas.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <h3>Roundup Herbicide Lawsuit</h3>
+                    <p>Representing clients in cases involving potential cancer risks from glyphosate exposure in Roundup herbicide products.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚕️</div>
+                    <h3>Mesothelioma Claims</h3>
+                    <p>Expert legal representation for mesothelioma patients seeking compensation for asbestos exposure-related injuries.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🍼</div>
+                    <h3>NEC Baby Formula Cases</h3>
+                    <p>Helping families whose premature infants developed NEC after being fed cow's milk-based formulas like Similac or Enfamil.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚗</div>
+                    <h3>Motor Vehicle Accidents</h3>
+                    <p>Comprehensive legal support for car accident victims dealing with physical injuries and emotional trauma.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧯</div>
+                    <h3>AFFF Fire Foam Lawsuit</h3>
+                    <p>Representing individuals exposed to harmful PFAS chemicals in firefighting foam linked to cancer and health risks.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏥</div>
+                    <h3>Medical Device Claims</h3>
+                    <p>Legal representation for various defective medical device cases including Bard PowerPort and other device-related injuries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get Your Free Case Review</h2>
+                <p>If you've been injured by a prescription drug, defective medical device, or other harmful product, you may be entitled to compensation. Our experienced legal team is here to help you understand your rights and options.</p>
+                
+                <ul class="contact-features">
+                    <li>Free Case Evaluation</li>
+                    <li>No Upfront Fees</li>
+                    <li>24/7 Support Available</li>
+                    <li>Experienced Legal Team</li>
+                    <li>Proven Track Record</li>
+                    <li>Personalized Attention</li>
+                </ul>
+            </div>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="caseType">Case Type *</label>
+                    <select id="caseType" name="caseType" required>
+                        <option value="">Select Your Case Type</option>
+                        <option value="roundup">Roundup Herbicide Lawsuit</option>
+                        <option value="mesothelioma">Mesothelioma Claims</option>
+                        <option value="nec">NEC Baby Formula</option>
+                        <option value="motor_vehicle">Motor Vehicle Accident</option>
+                        <option value="afff">AFFF Fire Foam Lawsuit</option>
+                        <option value="talcum">Talcum Powder</option>
+                        <option value="camp_lejeune">Camp Lejeune Water Contamination</option>
+                        <option value="bard_powerport">Bard PowerPort</option>
+                        <option value="paraquat">Paraquat Lawsuits</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Tell us about your case *</label>
+                    <textarea id="message" name="message" placeholder="Please describe your situation, including when the incident occurred, any injuries sustained, and any relevant details..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Free Case Review</button>
+            </form>
+        </div>
+    </section>
+
+     <!-- TrustedForm -->
+<script type="text/javascript">
+  (function() {
+    var tf = document.createElement('script');
+    tf.type = 'text/javascript';
+    tf.async = true;
+    tf.src = ("https:" == document.location.protocol ? 'https' : 'http') +
+      '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&use_tagged_consent=true&l=' +
+      new Date().getTime() + Math.random();
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(tf, s);
+  })();
+</script>
+<noscript>
+  <img src='https://api.trustedform.com/ns.gif' />
+</noscript>
+<!-- End TrustedForm -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Torts.Attorney. All rights reserved. | Professional Legal Services</p>
+        </div>
+    </footer>
+
+    <script>
+        // Load uploaded images
+        async function loadImages() {
+            try {
+                // Load the scales of justice image for hero section
+                const scalesImageData = await window.fs.readFile('Image 1.png');
+                const scalesBlob = new Blob([scalesImageData], { type: 'image/png' });
+                const scalesUrl = URL.createObjectURL(scalesBlob);
+                const scalesImg = document.querySelector('.hero-image img');
+                if (scalesImg) scalesImg.src = scalesUrl;
+
+                // Load the healthcare provider image for about section
+                const careImageData = await window.fs.readFile('Image 2.jpeg');
+                const careBlob = new Blob([careImageData], { type: 'image/jpeg' });
+                const careUrl = URL.createObjectURL(careBlob);
+                const careImg = document.querySelector('.about-image img');
+                if (careImg) careImg.src = careUrl;
+
+                // Load the pharmacist image for expertise section
+                const pharmacistImageData = await window.fs.readFile('Image 3.jpeg');
+                const pharmacistBlob = new Blob([pharmacistImageData], { type: 'image/jpeg' });
+                const pharmacistUrl = URL.createObjectURL(pharmacistBlob);
+                const pharmacistImg = document.querySelector('.expertise-card img');
+                if (pharmacistImg) pharmacistImg.src = pharmacistUrl;
+
+                // Load the medical assessment image for expertise section
+                const medicalImageData = await window.fs.readFile('Image 4.jpeg');
+                const medicalBlob = new Blob([medicalImageData], { type: 'image/jpeg' });
+                const medicalUrl = URL.createObjectURL(medicalBlob);
+                const medicalImg = document.querySelectorAll('.expertise-card img')[1];
+                if (medicalImg) medicalImg.src = medicalUrl;
+
+            } catch (error) {
+                console.log('Error loading images:', error);
+                // Fallback to placeholder content if images can't be loaded
+            }
+        }
+
+        // Load images when page loads
+        window.addEventListener('load', loadImages);
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            // Create email body
+            const emailBody = `
+New Case Review Request:
+
+Name: ${data.firstName} ${data.lastName}
+Email: ${data.email}
+Phone: ${data.phone}
+Case Type: ${data.caseType}
+
+Case Details:
+${data.message}
+
+Submitted on: ${new Date().toLocaleString()}
+            `;
+            
+            // Create mailto link
+            const mailtoLink = `mailto:tortsassistance@gmail.com?subject=New Case Review Request - ${data.firstName} ${data.lastName}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            alert('Thank you for your submission! Your email client will open to send your case details. We will review your information and get back to you within 24 hours.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.service-card, .contact-form, .contact-info').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
